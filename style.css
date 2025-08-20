@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e8f5e9;
+    margin: 0;
+    padding: 0 10px;
+    color: #4e342e;
+    line-height: 1.6;
+}
+
+/* Headings remain centered */
+h1, h2 {
+    color: #2e7d32;
+    text-align: center;
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: clamp(2em, 4vw, 2.5em);
+    margin-top: 40px;
+}
+
+h2 {
+    font-size: clamp(1.5em, 3vw, 1.8em);
+    margin-top: 30px;
+}
+
+/* Sections stay centered as blocks, but text inside is left aligned */
+section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    text-align: left; 
+}
+
+/* Body text & lists aligned left */
+p, ul, ol {
+    margin: 20px 0;
+    text-align: left;  
+}
+
+ul, ol {
+    list-style-position: outside;
+    padding-left: 20px;
+}
+
+/* Footer still centered */
+footer {
+    display: flex;
+    justify-content: center
+    align-items: center;
+    margin: 40px auto 0;
+    padding: 20px 0;
+    background-color: #81c784;
+    color: #fff;
+}
+
+/* Facts section with side image */
+.facts-section {
+    display: flex;
+    flex-wrap: wrap;         /* stacks on small screens */
+    align-items: flex-start; /* keeps top edges aligned */
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.facts-text {
+    flex: 2 1 550px; /* wider for text */
+}
+
+.facts-image {
+    flex: 1 1 300px; /* narrower for image */
+    display: flex;
+    justify-content: center;
+}
+
+.plant-image {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.with-icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* keeps heading + icon centered */
+    gap: 30px;               /* space between icon and text */
+}
+
+.icon {
+    width: 200px;   /* adjust size */
+    height: auto;
+}
+
+/* Floating message box for JS output */
+#message-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #2e7d32;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 0.9em;
+    display: none; /* hidden by default */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
